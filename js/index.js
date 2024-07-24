@@ -1,5 +1,47 @@
+fetch("https://api.noroff.dev/api/v1/gamehub").then((data)=> {
+    // console.log(data)
+    return data.json();
+}).then((completeData)=>{
+    // console.log(completeData)
+    let data1 = "";
+    
+    completeData.map((values)=>{
+        data1 += `
+        <div class="card">
+        <p id="product-title">${values.title}</p>
+        <img src=${values.image} alt="Image" id="product-image">
+        
+        <p id="description">${values.description}</p>
+        <p id="category">Category: ${values.genre}</p>
+        <p id="price">Price: $${values.price}</p>
+        <p id="onSale">ON SALE!</p>  
+        <button id="addCart-btn">Add to cart</button>
+        <button id="buy-btn">BUY NOW</button>         
+        </div>
+        `
+    });
+   document.getElementById("products").innerHTML = data1;
+    
+}).catch((error)=>{
+    console.log(error)
+})
 
-fetchData();
+
+
+
+/* 
+Research how to make it visual when a product is on sale. 
+At the same time make the price update with each product thats on sale. 
+Add a small navbar to navigate to the cart and back to products page. 
+
+
+*/
+
+
+
+
+
+/* fetchData();
 
  async function fetchData(){
 
@@ -37,7 +79,7 @@ fetchData();
         console.error(error)
     }
 
- }
+ } */
 
  // OK so I figured out how to access the values in the GameHub API
  // Now we need to make our card. First we will create 1 card and 1 card only. 
