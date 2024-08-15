@@ -1,11 +1,10 @@
 
+const API_POSTS_URL = "https://api.noroff.dev/api/v1/gamehub";
 
-
-async function loadGames() {
-    const response = await fetch("https://api.noroff.dev/api/v1/gamehub")
-    const games = await response.json();
-
-    return games;
+async function getData() {
+    const response = await fetch(API_POSTS_URL)
+    const json = await response.json();
+    return json;
 }
 
 
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let games = [];
     
     try {
-        games = await loadGames();
+        games = await getData();
         
 
         let data1 = "";
@@ -27,13 +26,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         data1 += `
         <div class="card">
         <p id="product-title">${values.title}</p>
-        </a><img src=${values.image} alt="Image" id="product-image">
+        <a href="/product/index.html"><img src=${values.image} alt="Image" id="product-image"></a>
         <p id="category">Category: ${values.genre}</p>
         <p id="price">Price: $${onDiscount}</p>
         <p id="onSale">$${salesDisplay} on offer!</p>
-        <button id="addCart-btn" class="cart-btn">Add to cart</button>
-        <button id="buy-btn" class="">BUY</button>  
-        <a href="/product/index.html" class="description-link">Read more..</a>       
+        <button id=${values.id} class="add-to-cart">Add to cart</button>
+        <button id=${values.id} class="buy-btn">BUY</button>         
         </div>
         `
         })
