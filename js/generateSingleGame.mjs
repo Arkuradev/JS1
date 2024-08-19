@@ -46,7 +46,8 @@ export function generateSingleGame(game) {
 gameListItem.appendChild(gameImage);
 gameListItem.appendChild(gameTitle);  
 gameListItem.appendChild(gamePrice);
-gameListItem.appendChild(gameDescription);  
+// gameListItem.appendChild(gameDescription);  
+// This needs to be fixed in the future. 
 
 return gameListItem;
 

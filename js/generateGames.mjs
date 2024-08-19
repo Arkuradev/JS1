@@ -1,9 +1,10 @@
 import { generateSingleGame } from "./generateSingleGame.mjs";
 
 function generateGames(games) {
+  const gamesContainer = document.querySelector('#gamesSection');
   for (let i = 0; i < games.length; i++) {
     const singleGame = generateSingleGame(games[i]);
-    console.log(singleGame) 
+    gamesContainer.appendChild(singleGame);
   }
 };
 
