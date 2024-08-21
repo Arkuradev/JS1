@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+div {
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.cart-container {
+  width: 800px;
+  height: 500px;
+}
+
+.remove-btn {
+margin-top: 45px; 
+
+height: 30px; 
+}
+
+h3, p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+img {
+  width: 100px;
+  height: 125px;
+}

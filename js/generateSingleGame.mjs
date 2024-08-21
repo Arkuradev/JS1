@@ -32,7 +32,7 @@ export function generateSingleGame(game) {
 
   // Game genre
   const gameGenre = document.createElement("p");
-  gameGenre.textContent = `${game.ageRating}`;
+  gameGenre.textContent = `${game.genre}`;
 
   // Game year released
   const gameYearRelease = document.createElement("p");
@@ -42,21 +42,13 @@ export function generateSingleGame(game) {
   const gameOnSale = document.createElement("p");
   gameOnSale.textContent = `${game.onSale}`;
 
-
-gameListItem.appendChild(gameImage);
-gameListItem.appendChild(gameTitle);  
-gameListItem.appendChild(gamePrice);
-// gameListItem.appendChild(gameDescription);  
-// This needs to be fixed in the future. 
-
-return gameListItem;
-
-/*
+// Appending content to the all games page. 
 gameLink.appendChild(gameImage);
 gameLink.appendChild(gameTitle);
 gameLink.appendChild(gamePrice);
-gameLink.appendChild(gameDescription);
 
-// gameListItem.appendChild(gameLink); */
+gameListItem.appendChild(gameLink);
+
+return gameListItem;
 }
 
