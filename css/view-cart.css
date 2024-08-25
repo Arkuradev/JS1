@@ -30,3 +30,24 @@ img {
   width: 100px;
   height: 125px;
 }
+
+.product-container {
+  background-color: rgb(223, 217, 217);
+  margin-right: 200px;
+  
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-info h3 {
+  margin-top: -5px;
+  margin-bottom: 1px;
+}
+
+.game-info p {
+  height: 50px;
+  width: 330px;
+}

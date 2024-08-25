@@ -9,14 +9,16 @@ function viewCart() {
       const itemDiv = document.createElement('div');
 
       itemDiv.innerHTML = `
+      <div class="product-container">
       <img src="${item.image}">
+      <div class="game-info">
       <h3>${item.title}</h3>
       <p>${item.description}</p>
+      </div>
       <p>Age rating: ${item.ageRating}</p>
       <p>Price: $${item.price}</p>
-
       <button class="remove-btn" data-index="${index}">Remove from cart</button>
-      
+      </div>
       `;
       cartContainer.appendChild(itemDiv);
     });
