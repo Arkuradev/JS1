@@ -1,3 +1,5 @@
+// Detailed product information and option to add product to cart. 
+
 import { addToCart } from "./cart.mjs";
 
 export function generateSingleItem(game) {

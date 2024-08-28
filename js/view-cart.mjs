@@ -43,6 +43,7 @@ cartContainer.addEventListener('click', function(event) {
 })
 
 
+
 // Rendering of the cart
 viewCart();
 

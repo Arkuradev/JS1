@@ -1,5 +1,5 @@
 
-
+// Renders each game in its own div container. 
 
 export function generateSingleGame(game) {
   
