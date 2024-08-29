@@ -1,8 +1,11 @@
 
 // Renders each game in its own div container. 
 
+
 export function generateSingleGame(game) {
   
+  
+
   const gameListItem = document.createElement("li");
   gameListItem.classList.add("gameProduct");
 

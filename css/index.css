@@ -73,3 +73,15 @@ footer p {
     color: white;
 }
 
+
+.message {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+
+     &.error {
+        color: red;
+        border: 1px red solid;
+    }
+}
+
