@@ -1,0 +1,6 @@
+Things to fix: 
+
+1. Add a loading spinner/indicator whenever a page fetches data. 
+2. Add displaying of error messages to all pages. 
+3. Display the total amount to pay when products are added to the cart. 
+4. Add a checkout button so the user can finish the purchase and clear cart/localStorage. 
