@@ -1,6 +1,7 @@
 Things to fix: 
 
-1. Add a loading spinner/indicator whenever a page fetches data. 
-2. Add displaying of error messages to all pages. 
+1. Add a loading spinner/indicator whenever a page fetches data. - Check!
+1.5 Add a basic navbar with the cart on all pages. 
+2. Add displaying of error messages to all pages. - In progress!
 3. Display the total amount to pay when products are added to the cart. 
 4. Add a checkout button so the user can finish the purchase and clear cart/localStorage. 

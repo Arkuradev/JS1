@@ -1,5 +1,6 @@
 const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 const cartContainer = document.getElementById('cart-container');
+const checkoutContainer = document.getElementById('checkout-container');
 
 function viewCart() {
   if(cartItems.length > 0) {
@@ -22,9 +23,25 @@ function viewCart() {
       `;
       cartContainer.appendChild(itemDiv);
     });
+    // Update total price
+    updateTotalPrice();
+
     } else {
     cartContainer.innerHTML = `<h2>Your cart is empty.</h2>`
+    checkoutContainer.innerHTML = "";
   }
+}
+
+
+// Function to update the total price with 2 decimals if any. 
+function updateTotalPrice() {
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
+  checkoutContainer.innerHTML = `
+  <div>  
+  <p>Total Price: $${totalPrice.toFixed(2)}</p>
+  <button id="checkout-btn">Purchase</button>
+  </div>
+  `
 }
 
 // Function to remove an item from the cart
@@ -44,6 +61,6 @@ cartContainer.addEventListener('click', function(event) {
 
 
 
-// Rendering of the cart
+// Calling the viewCart function.
 viewCart();
 
