@@ -44,6 +44,15 @@ function updateTotalPrice() {
   `
 }
 
+// Event listener to complete the purchase. 
+checkoutContainer.addEventListener('click', function(event) {
+  if(event.target.id === 'checkout-btn') {
+    window.location.href = '/checkout/confirmation/order-confirmation.html';
+    localStorage.clear();
+  }
+})
+
+
 // Function to remove an item from the cart
 function removeFromCart(index) {
   cartItems.splice(index, 1); // Removes the item from the array. 
