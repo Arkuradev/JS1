@@ -18,7 +18,7 @@ function viewCart() {
       </div>
       <p>Age rating: ${item.ageRating}</p>
       <p>Price: $${item.price}</p>
-      <button class="remove-btn" data-index="${index}">Remove from cart</button>
+      <button class="remove-btn" data-index="${index}">Remove</button>
       </div>
       `;
       cartContainer.appendChild(itemDiv);
@@ -38,7 +38,7 @@ function updateTotalPrice() {
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
   checkoutContainer.innerHTML = `
   <div>  
-  <p>Total Price: $${totalPrice.toFixed(2)}</p>
+  <p>Total Price: <span id="total-price">$${totalPrice.toFixed(2)}</span></p>
   <button id="checkout-btn">Purchase</button>
   </div>
   `

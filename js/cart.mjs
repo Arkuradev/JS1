@@ -13,5 +13,5 @@ export function addToCart(game) {
     localStorage.setItem("cart", JSON.stringify(newCart));
     
   }
-  showAddToCartMessage();
+  showAddToCartMessage(); //Displays a message when user adds an item to the cart. 
 }

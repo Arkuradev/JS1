@@ -8,7 +8,7 @@ export function showAddToCartMessage() {
 
   setTimeout(() => {
     messageElement.style.display = "none";
-  }, 1500); // Removes the "Item added to cart" message after 2 seconds.
+  }, 1500); // Removes the "Item added to cart" message after 1.5 seconds.
   
 }
 
