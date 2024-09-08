@@ -11,8 +11,7 @@ export async function fetchData(url) {
   return data;
   
   } catch (error) {
-    console.error("Error fetching data:", error);
-    displayMessage("#gamesSection", "error", "Error: Failed to fetch games");
+    displayMessage("#gamesSection", "error", "Error: Failed to fetch games from API");
   }
 
   throw error;

@@ -5,6 +5,14 @@ body {
     
 }
 
+a {
+    text-decoration: none;
+}
+
+.nav {
+    text-align: center;
+}
+
 #games {
     display: flex;
     justify-content: space-evenly;

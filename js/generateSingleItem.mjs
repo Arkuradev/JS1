@@ -1,6 +1,7 @@
 // Detailed product information and option to add product to cart. 
 
 import { addToCart } from "./cart.mjs";
+import { showAddToCartMessage } from "./showAddToCartMessage.mjs";
 
 export function generateSingleItem(game) {
   const gameContainer = document.createElement('div');
@@ -34,6 +35,10 @@ export function generateSingleItem(game) {
   const gamePrice = document.createElement('p');
   gamePrice.textContent = `Price: $${game.price}`
 
+  // Display message when item is added to cart. 
+  const addToCartMessage = document.createElement('div');
+  addToCartMessage.setAttribute("id", "add-to-cart-message");
+  addToCartMessage.textContent = "Item added to cart";
 
   // Add to cart button with event listener to run addToCart() when clicked. 
   const gameAddToCartButton = document.createElement('button');
@@ -42,7 +47,7 @@ export function generateSingleItem(game) {
   })
   gameAddToCartButton.textContent = "Add to cart";
 
-  gameContainer.append(gameImage, gameTitle, gamePrice, gameDescription, gameReleased, gameGenre, gameAgeRating, gameAddToCartButton);
+  gameContainer.append(gameImage, gameTitle, gamePrice, gameDescription, gameReleased, gameGenre, gameAgeRating, gameAddToCartButton, addToCartMessage);
   return gameContainer;
 
   

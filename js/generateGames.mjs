@@ -1,4 +1,4 @@
-import { generateSingleGame } from "./generateSingleGame.mjs";
+import { generateSingleGame } from "./generateGameCards.mjs";
 
 function generateGames(games) {
   const gamesContainer = document.querySelector('#gamesSection');
